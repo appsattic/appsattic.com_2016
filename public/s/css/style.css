@@ -1,8 +1,25 @@
 body {
-  padding: 50px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header {
+  border-bottom: 1px solid gray;
+}
+
+.container {
+  width: 720px;
+  margin: 0 auto;
 }
 
 a {
   color: #00B7FF;
+}
+
+.c {
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid gray;
 }

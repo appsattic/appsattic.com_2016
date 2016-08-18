@@ -4,4 +4,19 @@ html
     title= title
     link(rel='stylesheet', href='/s/css/style.css')
   body
-    block content
+    header.container
+      p
+        a(href="/") AppsAttic
+        |  : 
+        a(href="/about") About
+
+    .container
+      block content
+
+    footer.container
+      p.c
+        | Copyright 
+        a(href="/") Apps Attic Ltd
+        |  2010-2016. Please see 
+        a(href="/about") About
+        |  for licensing information.
