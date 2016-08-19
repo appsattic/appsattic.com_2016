@@ -6,13 +6,13 @@ block blogcontent
       a(href=post.name)= post.meta.title
     | !{post.html}
     if post.meta.tags
-      p Tags: 
+      p(style="float: right;") Tags: 
         for tag in post.meta.tags
           a.btn.btn-default.btn-sm(href="tag-" + tag)= tag
           |  
-    p Posted: #{post.meta.moment.fromNow()}
-    hr.col-md-11
-  p
+    p(style="float: left;") Posted: #{post.meta.moment.fromNow()}
+    .clear
+  p.c
     if blog.nextUrl
       a(href=blog.nextUrl) &laquo; Older Posts
     else

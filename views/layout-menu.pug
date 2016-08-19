@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/s/css/style.css')
+  body
+    header.container
+      p
+        a(href="/") AppsAttic
+        |  :: 
+        a(href="/blog/") Blog
+        |  :: 
+        a(href="/about") About
+
+    .container
+      .menu
+        block menu
+      .content
+        block content
+
+    footer.container.clear
+      p.c
+        | Copyright 
+        a(href="/") Apps Attic Ltd
+        |  2010-2016. Please see 
+        a(href="/about") About
+        |  for licensing information.

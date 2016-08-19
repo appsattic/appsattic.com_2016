@@ -1,5 +1,5 @@
 {
     "title" : "Example Blog Post",
     "date" : "2016-08-19T03:12:38.619Z",
-    "tags" : [ ]
+    "tags" : [ "imagelicious", "firebase", "reactjs", "browserify" ]
 }

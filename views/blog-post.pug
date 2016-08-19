@@ -8,5 +8,5 @@ block blogcontent
       for tag in blog.thisPost.meta.tags
         a.btn.btn-default.btn-sm(href='tag-' + tag)= tag
         |  
-  p Posted: #{blog.thisPost.meta.moment.fromNow()}
-  hr
+  p(style="float: left;") Posted: #{blog.thisPost.meta.moment.fromNow()}
+  .clear

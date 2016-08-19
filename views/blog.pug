@@ -1,37 +1,36 @@
-extends layout
+extends layout-menu
 
 block content
-  .row
-    .col-md-8
-      block blogcontent
+  block blogcontent
 
-    .col-md-4
-      h2 Latest Posts
-      ul
-        for post in blog.latest
-          li
-            a(href=post.name) #{post.meta.title}
+block menu
+  h2 Latest Posts
+  ul
+    for post in blog.latest
+      li
+        a(href=post.name) #{post.meta.title}
 
-      h2 Archive
-      ul
-        for year, yearNum in blog.archive
-          li
-            a(href='archive-' + yearNum)= yearNum
-            ul
-              for month, monthNum in blog.archive[yearNum]
-                li
-                  a(href='archive-' + yearNum + '-' + monthNum)= month[0].meta.moment.format("MMMM")
-                  |  (#{month.length})
 
-      h2 Tags
-      p
-        for tagName in Object.keys(blog.tagged).sort()
-          a.btn.btn-default.btn-sm(href='tag-' + tagName) #{tagName} (#{blog.tagged[tagName].length})
-          |  
+  h2 Archive
+  ul
+    for year, yearNum in blog.archive
+      li
+        a(href='archive-' + yearNum)= yearNum
+        ul
+          for month, monthNum in blog.archive[yearNum]
+            li
+              a(href='archive-' + yearNum + '-' + monthNum)= month[0].meta.moment.format("MMMM")
+              |  (#{month.length})
 
-      h2 Feeds
-      p
-        a(href="./rss20.xml") RSS v2.0
-        | , 
-        a(href="./atom.xml") Atom
-        | .
+  h2 Tags
+  p
+    for tagName in Object.keys(blog.tagged).sort()
+      a.btn.btn-default.btn-sm(href='tag-' + tagName) #{tagName} (#{blog.tagged[tagName].length})
+      |  
+
+  h2 Feeds
+  p
+    a(href="./rss20.xml") RSS v2.0
+    | , 
+    a(href="./atom.xml") Atom
+    | .
