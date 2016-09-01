@@ -1,0 +1,10 @@
+extends blog
+
+block blogcontent
+
+  h2 Category Cloud
+
+  p
+    for catName in Object.keys(blog.cat).sort()
+      a.btn(href='cat-' + catName) #{catName} (#{blog.cat[catName].length})
+      |  

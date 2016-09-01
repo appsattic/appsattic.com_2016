@@ -1,24 +1,27 @@
 extends blog
 
 block blogcontent
-  for post in blog.thesePosts
-    h2
-      a(href=post.name)= post.meta.title
-    | !{post.html}
-    if post.meta.tags
-      p(style="float: right;") Tags: 
-        for tag in post.meta.tags
-          a.btn.btn-default.btn-sm(href="tag-" + tag)= tag
-          |  
-    p(style="float: left;") Posted: #{post.meta.moment.fromNow()}
-    .clear
-  p.c
-    if blog.nextUrl
-      a(href=blog.nextUrl) &laquo; Older Posts
-    else
-      span &laquo; Older Posts
-    |  - Page #{blog.page} of #{blog.pages.length} - 
-    if blog.prevUrl
-      a(href=blog.prevUrl) Newer Posts &raquo;
-    else
-      span Newer Posts &raquo;
+  .row
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      for post in blog.thesePosts
+        .post-preview
+          a(href=post.name)
+            h2.post-title= post.meta.title
+            h3.post-subtitle= post.meta.subtitle
+          p.post-meta
+            | Posted by 
+            a(href='#')= 'Author goes here ...'
+            |  #{post.meta.moment.fromNow()}
+        hr
+
+      ul.pager
+        if blog.prevUrl
+          li.previous
+            a(href=blog.nextUrl) ← Newer Posts
+        li
+          a(href=".") Page #{blog.page || 1} of #{blog.pages.length}
+        if blog.nextUrl
+          li.next
+            a(href=blog.nextUrl) Older Posts →
+
+      hr

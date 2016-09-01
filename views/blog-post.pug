@@ -1,12 +1,18 @@
 extends blog
 
 block blogcontent
-  h2= blog.thisPost.meta.title
-  | !{blog.thisPost.html}
-  if blog.thisPost.meta.tags
-    p(style="float: right;") Tags: 
-      for tag in blog.thisPost.meta.tags
-        a.btn.btn-default.btn-sm(href='tag-' + tag)= tag
-        |  
-  p(style="float: left;") Posted: #{blog.thisPost.meta.moment.fromNow()}
-  .clear
+  .row
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      h2
+        a(href="/blog/" + blog.thisPost.name)= blog.thisPost.meta.title
+      | !{blog.thisPost.html}
+      p Posted: #{blog.thisPost.meta.moment.fromNow()}
+      if blog.thisPost.meta.tags
+        p(style="float: right;")
+          | Category:
+          a.btn.btn-default.btn-sm(href='category-' + blog.thisPost.meta.category)= blog.thisPost.meta.category
+          | Tags: 
+          for tag in blog.thisPost.meta.tags
+            a.btn.btn-default.btn-sm(href='tag-' + tag)= tag
+            |  
+      .clear

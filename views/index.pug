@@ -1,5 +1,29 @@
 extends layout
 
 block content
-  p.c
-    img(src="/s/img/appsattic-1.png")
+  h2(style="margin-bottom: 1em; text-align: center;") Open Source Projects
+  .row
+    .col-md-4.col-sm-6
+      .well
+        a(href='/project/imagelicious/')
+          img.img-responsive(src='/s/img/imagelicious-320.png', alt='imagelicious.org - An open source, simple to use personal photo gallery built on Firebase.')
+        h3 imagelicious.org
+        p An open source, simple to use personal photo gallery built on Firebase.
+        ul
+          li Uses Firebase Authentication
+          li A Single-Page App built with ReactJS
+          li Bundled using Browserify
+          li Creates thumbnails inside the browser
+        .c
+          a.btn.btn-default(href='https://imagelicious.org/') View Demo
+          a.btn.btn-default(href='https://github.com/appsattic/imagelicious.org') Source Code
+
+  .row
+    .col-md-6
+      h2(style="margin-bottom: 1em; text-align: center;") Latest Posts
+      p.c
+        for post in blog.latest
+          a(href="/blog/" + post.name)= post.meta.title
+          br
+    .col-md-6
+      h2(style="margin-bottom: 1em; text-align: center;") Latest Tweets
