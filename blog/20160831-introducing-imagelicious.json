@@ -1,0 +1,12 @@
+{
+  "title"    : "Introducing Imagelicious on Firebase",
+  "subtitle" : "A simple to use personal photo gallery built on Firebase.",
+  "authorInfo"   : {
+    "title" : "Andrew Chilton",
+    "email" : "chilts@appsattic.com"
+  },
+  "date"     : "2016-08-31T10:19:08.305Z",
+  "author"   : "andrew-chilton",
+  "category" : "imagelicious",
+  "tags"     : [ "firebase", "reactjs", "browserify" ]
+}

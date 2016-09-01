@@ -8,7 +8,7 @@ html(lang='en')
     meta(name='author', content='')
     title= title
     link(href='https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
-    link(href='/s/css/clean.min.css', rel='stylesheet')
+    link(href='/s/css/clean.css', rel='stylesheet')
     link(href='/s/css/util.css', rel='stylesheet')
     link(href='https://cdn.jsdelivr.net/fontawesome/4.6.3/css/font-awesome.min.css', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
@@ -46,9 +46,9 @@ html(lang='en')
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
             .site-heading
-              h1= title || blog.title
+              h1= title || blog.title || 'Apps Attic Ltd'
               hr.small
-              span.subheading= subtitle || 'Specialising in Open Source Web Apps'
+              span.subheading= subtitle || ( blog.thisPost && blog.thisPost.meta && blog.thisPost.meta.subtitle ) || 'Specialising in Open Source Web Apps'
 
     .container
       block content

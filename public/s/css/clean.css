@@ -25,11 +25,12 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #333333;
+  color: #337ab7;
+  text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #0085A1;
+  color: #333333;
 }
 a img:hover,
 a img:focus {

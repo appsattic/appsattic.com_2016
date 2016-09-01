@@ -10,7 +10,7 @@ block blogcontent
             h3.post-subtitle= post.meta.subtitle
           p.post-meta
             | Posted by 
-            a(href='#')= 'Author goes here ...'
+            span(style="font-weight:bold;")= post.meta.authorInfo.title
             |  #{post.meta.moment.fromNow()}
         hr
 
