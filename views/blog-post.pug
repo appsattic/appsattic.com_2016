@@ -7,10 +7,11 @@ block blogcontent
         a(href="/blog/" + blog.thisPost.name)= blog.thisPost.meta.title
       | !{blog.thisPost.html}
       p Posted: #{blog.thisPost.meta.moment.fromNow()}
+      p(style="float: left;")
+        | Category: 
+        a.btn.btn-default.btn-sm(href='category-' + blog.thisPost.meta.category)= blog.thisPost.meta.category
       if blog.thisPost.meta.tags
         p(style="float: right;")
-          | Category:
-          a.btn.btn-default.btn-sm(href='category-' + blog.thisPost.meta.category)= blog.thisPost.meta.category
           | Tags: 
           for tag in blog.thisPost.meta.tags
             a.btn.btn-default.btn-sm(href='tag-' + tag)= tag
