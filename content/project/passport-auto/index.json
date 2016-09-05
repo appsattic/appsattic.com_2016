@@ -1,0 +1,13 @@
+{
+  "title": "Passport Auto",
+  "subtitle": "Use PassportJS easily and without repetition for the most common strategies.",
+  "menu": [
+    { "name" : ".",                     "title": "Introduction"          },
+    { "name" : "comparison",            "title": "Comparison"            },
+    { "name" : "adding-a-new-provider", "title": "Adding a new Provider" },
+    { "name" : "guide",                 "title": "Guide"                 },
+    { "name" : "in-depth-tutorial",     "title": "In Depth Tutorial"     },
+    { "name" : "example-vanilla",       "title": "Vanilla Example"       },
+    { "name" : "example-with-auto",     "title": "Auto Example"          }
+  ]
+}

@@ -6,7 +6,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-    title= title
+    title #{blog.title || (content && content.thisPage && content.thisPage.meta.title) || title} - Apps Attic Ltd
     link(href='https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
     link(href='/s/css/clean.css', rel='stylesheet')
     link(href='/s/css/util.css', rel='stylesheet')
@@ -46,9 +46,9 @@ html(lang='en')
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
             .site-heading
-              h1= title || blog.title || 'Apps Attic Ltd'
+              h1= blog.title || (content && content.thisPage && content.thisPage.meta.title) || title || 'Apps Attic Ltd'
               hr.small
-              span.subheading= subtitle || ( blog.thisPost && blog.thisPost.meta && blog.thisPost.meta.subtitle ) || 'Specialising in Open Source Web Apps'
+              span.subheading= subtitle || (content && content.thisPage && content.thisPage.meta.subtitle) || ( blog.thisPost && blog.thisPost.meta && blog.thisPost.meta.subtitle ) || 'Specialising in Open Source Web Apps'
 
     .container
       block content

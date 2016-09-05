@@ -1,8 +1,22 @@
 extends layout
 
 block content
-  h2 Imagelicious
+  .row
+    if content.page.index.meta.menu
+      .col-md-9
+        h2= content.thisPage.meta.subtitle || content.page.index.meta.subtitle || '[undefined]'
+        | !{content.thisPage.html}
 
-  p Coming soon ...
-
-  p (Ends)
+      .col-md-3
+        h3 Contents
+        ol
+          for item in ( content.page.index.meta.menu )
+            li
+              if ( content.thisPage.name === item.name || ( content.thisPage.name === 'index' && item.name === '.' ) )
+                span= item.title
+              else
+                a(href=item.name)= item.title
+    else
+      .col-md-12
+        h2= content.thisPage.meta.subtitle || content.page.index.meta.subtitle || '[undefined]'
+        | !{content.thisPage.html}
