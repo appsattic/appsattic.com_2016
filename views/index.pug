@@ -3,6 +3,7 @@ extends layout
 block content
   h2(style="margin-bottom: 1em; text-align: center;") Open Source Projects
   .row
+
     .col-md-4.col-sm-6
       .well
         a(href='/project/imagelicious/')
@@ -17,6 +18,21 @@ block content
         .c
           a.btn.btn-default(href='https://imagelicious.org/') View Demo
           a.btn.btn-default(href='https://github.com/appsattic/imagelicious.org') Source Code
+
+    .col-md-4.col-sm-6
+      .well
+        a(href='/project/bcrypt/')
+          img.img-responsive(src='/s/img/bcrypt-320.png', alt='bcrypt.org - Simple server with API to check your bcrypt password strategy.')
+        h3 bcrypt.org
+        p Simple server with API to check your bcrypt password strategy.
+        ul
+          li Written in Go
+          li Simple API
+          li Use in your unit tests
+          li Independent validation of your passwords
+        .c
+          a.btn.btn-default(href='https://bcrypt.org/') View Site
+          a.btn.btn-default(href='https://github.com/appsattic/bcrypt.org') Source Code
 
   .row
     .col-md-6
