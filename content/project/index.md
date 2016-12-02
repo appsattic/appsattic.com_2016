@@ -1,7 +1,9 @@
 ## Our Open Source Web Apps ##
 
-* [imagelicious](/project/imagelicious/) - An open source, simple to use personal photo gallery built on Firebase.
+* [imagelicious.org](/project/imagelicious/) - An open source, simple to use personal photo gallery built on Firebase.
     * uses ReactJS, Browserify, Firebase (Hosting, Realtime Database, Storage)
+* [bcrypt.org](/project/bcrypt/)
+* [publish.li](/project/publish/)
 
 ## Our Open Source Libraries ##
 
