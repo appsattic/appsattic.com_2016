@@ -21,6 +21,20 @@ block content
 
     .col-md-4.col-sm-6
       .well
+        a(href='/project/publish/')
+          img.img-responsive(src='/s/img/publish-320x200.png', alt='publish.li - Publish your articles with ease.')
+        h3 publish.li
+        p Publishing site with instant-publish capabilites (no login required):
+        ul
+          li Written in Go
+          li Uses BoltDB embedded key/value store
+          li Frontend written with Vue.js
+        .c
+          a.btn.btn-default(href='https://publish.li/') View Site
+          a.btn.btn-default(href='https://github.com/appsattic/publish.li') Source Code
+
+    .col-md-4.col-sm-6
+      .well
         a(href='/project/bcrypt/')
           img.img-responsive(src='/s/img/bcrypt-320x200.png', alt='bcrypt.org - Simple server with API to check your bcrypt password strategy.')
         h3 bcrypt.org
